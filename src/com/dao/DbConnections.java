@@ -16,7 +16,7 @@ public class DbConnections implements DBConnectionUtil {
 	 * private static String username; private static String password;
 	 */
 	static Connection conn;
-	static {
+	/*static {
 		try {
 			try {
 				Class.forName("com.mysql.jdbc.Driver");
@@ -31,10 +31,20 @@ public class DbConnections implements DBConnectionUtil {
 			e.printStackTrace();
 		}
 	}
-
+*/
 	@Override
 	public Connection getConnection() {
-		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecommerce", "root", "root");
+		} catch (ClassNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	
 		return conn;
 	}
 

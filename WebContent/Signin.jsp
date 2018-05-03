@@ -23,20 +23,21 @@
 				alt="Brand" src="views/logo.jpg"></a>
 		</div>
 
-		<!-- Collect the nav links, forms, and other content for toggling -->
+
 		<div class="collapse navbar-collapse"
 			id="bs-example-navbar-collapse-1">
 			<form id="shift" class="navbar-form navbar-right"
 				action="LoginServlet" method="post">
 				<div class="form-group">
 					<%
-						String message = (String) session.getAttribute("message");
+						String message = (String)request.getAttribute("message");
 					%>
 
 					<p class="form"
 						style="font-size: 14px; color: red; font-weight: bold; font-style: italic; float: left">
-						<%if(message!=null)
-							out.println(message);
+						<%
+							if (message != null)
+								out.println(message);
 						%>
 					</p>
 					<input type="text" class="form-control" placeholder="User Name"
@@ -54,13 +55,15 @@
 		<h3 class="display-4">Create Account</h3>
 		<hr>
 
-		<input type="text" placeholder="First Name" class="form-control" name="fname"> 
-		<input type="text" placeholder="Last Name" class="form-control" name="lname"> 
-		<input type="email" placeholder="Email" class="form-control" name="Email">
-		<input type="text" placeholder="User Name" class="form-control" name="uname">
-		<input type="password" placeholder="Password" class="form-control" name="pwd">
-		<input type="number" placeholder="Mobile Number" class="form-control" name="mobile"> 
-		<input type="date" placeholder="Date Of Birth" class="form-control" name="dob">
+		<input type="text" placeholder="First Name" class="form-control"
+			name="fname"> <input type="text" placeholder="Last Name"
+			class="form-control" name="lname"> <input type="email"
+			placeholder="Email" class="form-control" name="Email"> <input
+			type="text" placeholder="User Name" class="form-control" name="uname">
+		<input type="password" placeholder="Password" class="form-control"
+			name="pwd"> <input type="number" placeholder="Mobile Number"
+			class="form-control" name="mobile"> <input type="date"
+			placeholder="Date Of Birth" class="form-control" name="dob">
 		<button class="btn btn-primary">Sign Up</button>
 	</form>
 </body>
