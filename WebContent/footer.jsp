@@ -7,12 +7,12 @@
 
 <style type="text/css">
 .footer{
-text-align:centre; 
+margin:0 auto;
 bottom:0;
 left:0;
 width:100%;
 postion:fixed; 
-background:red;
+
 }
 
 </style>	

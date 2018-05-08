@@ -40,4 +40,18 @@ public class ProductsDaoImp implements ProductsDao {
 		return products;
 	}
 
+	@Override
+	public Products getById(int id) {
+		// TODO Auto-generated method stub
+		Products p=null;
+		for(Products pr:products){
+			 Object i=pr.getId();
+			if(i.equals(id)){
+			 p=pr;
+			}
+		
+	}
+		return p;
+
+}
 }

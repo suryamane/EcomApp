@@ -27,10 +27,11 @@
 		<div class="collapse navbar-collapse"
 			id="bs-example-navbar-collapse-1">
 			<form id="shift" class="navbar-form navbar-right"
-				action="LoginServlet" method="post">
+				action="controllerServlet?action=login" method="post">
 				<div class="form-group">
 					<%
 						String message = (String)request.getAttribute("message");
+						
 					%>
 
 					<p class="form"

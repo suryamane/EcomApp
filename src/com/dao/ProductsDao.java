@@ -6,4 +6,5 @@ import com.bean.Products;
 
 public interface ProductsDao {
 	List<Products> getProducts();
+	Products getById(int id);
 }
